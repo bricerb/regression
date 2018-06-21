@@ -1,0 +1,11 @@
+{
+  "serialNumber" : "100088377",
+  "cardBalance" : 0,
+  "cardExpiration" : "12/23/2037",
+  "customerSupportNumber" : "555-555-1111",
+  "issuer" : "Medicare - No offers",
+  "program" : "Medicare - No offers program",
+  "hasLimitedSpend" : true,
+  "hasOffers" : false,
+  "retailers" : ["CVS", "Discount Drug Mart", "Dollar General", "Duane Reade", "Family Dollar", "Freds, H-E-B", "Independent Merchants", "Meijer", "Rite Aid", "Sams Club", "WALGREENS", "Walmart", "Winn-Dixie Stores"]
+}

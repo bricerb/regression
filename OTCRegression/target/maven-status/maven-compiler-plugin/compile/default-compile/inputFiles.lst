@@ -1,0 +1,13 @@
+/Users/Brice/Desktop/OTCRegression/src/main/java/io/bricerb/otcregression/models/MemberDetailsRequest.java
+/Users/Brice/Desktop/OTCRegression/src/main/java/io/bricerb/otcregression/models/MemberDetailsResponse.java
+/Users/Brice/Desktop/OTCRegression/src/main/java/io/bricerb/otcregression/OTCRegressionApplication.java
+/Users/Brice/Desktop/OTCRegression/src/main/java/io/bricerb/otcregression/rest/MemberDetails.java
+/Users/Brice/Desktop/OTCRegression/src/main/java/io/bricerb/otcregression/utils/Utilities.java
+/Users/Brice/Desktop/OTCRegression/src/main/java/io/bricerb/otcregression/repo/Members.java
+/Users/Brice/Desktop/OTCRegression/src/main/java/io/bricerb/otcregression/models/ItemEligibilityResponse.java
+/Users/Brice/Desktop/OTCRegression/src/main/java/io/bricerb/otcregression/repo/Items.java
+/Users/Brice/Desktop/OTCRegression/src/main/java/io/bricerb/otcregression/rest/ItemEligibility.java
+/Users/Brice/Desktop/OTCRegression/src/main/java/io/bricerb/otcregression/models/SubmitItemRequest.java
+/Users/Brice/Desktop/OTCRegression/src/main/java/io/bricerb/otcregression/models/SubmitItemResponse.java
+/Users/Brice/Desktop/OTCRegression/src/main/java/io/bricerb/otcregression/models/ItemEligibilityRequest.java
+/Users/Brice/Desktop/OTCRegression/src/main/java/io/bricerb/otcregression/rest/SubmitItem.java
