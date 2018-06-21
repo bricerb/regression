@@ -25,9 +25,9 @@
     </build>
 
     <properties>
-        <java>1.9</java>
-        <maven.compiler.source>1.9</maven.compiler.source>
-        <maven.compiler.target>1.9</maven.compiler.target>
+        <!-- <java>1.9</java> -->
+        <!-- <maven.compiler.source>1.9</maven.compiler.source> -->
+        <!-- <maven.compiler.target>1.9</maven.compiler.target> -->
         <start-class>io.bricerb.otcregression.OTCRegressionApplication</start-class>
     </properties>
 
