@@ -1,6 +1,7 @@
 # Resolve Mock Server Dependencies
-cp -r OTCRegression/data mock_server
+cp -a OTCRegression/data mock_server
 cd mock_server
+ls
 mvn dependency:resolve
 mvn spring-boot:run </dev/null &>/dev/null &
 cd ..
