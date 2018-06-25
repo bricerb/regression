@@ -17,7 +17,9 @@ public class Members {
         MemberDetailsResponse response = new MemberDetailsResponse();
         for (String fileName : filesList) {
             response = getMember(fileName);
-            if (response.getCardBalance() != null) {
+
+            String[] filePath = fileName.split("/");
+            if (filePath[filePath.length-1].contains(cardNumber) || response.getSerialNumber().equals(cardNumber)) {
                 break;
             }
         }
