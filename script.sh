@@ -8,4 +8,7 @@ cd ..
 # Resolve Regression Test Dependencies
 cd OTCRegression
 mvn dependency:resolve
+lsof -i
+lsof -i tcp:8080
+lsof -i tcp:4723
 appium & mvn test
