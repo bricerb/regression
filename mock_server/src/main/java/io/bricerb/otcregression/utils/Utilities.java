@@ -17,7 +17,7 @@ import java.util.stream.Stream;
 
 public class Utilities {
 
-    public static List<String> deserializeMember(String base) {
+    public static List<String> deserialize(String base) {
         List<String> list = new ArrayList<>();
         try {
             List<File> filesInFolder = Files.walk(Paths.get(base))

@@ -13,7 +13,7 @@ public class Members {
     private Gson gson = new Gson();
 
     public MemberDetailsResponse getMemberDetails(String cardNumber) {
-        List<String> filesList = Utilities.deserializeMember(membersDir);
+        List<String> filesList = Utilities.deserialize(membersDir);
         MemberDetailsResponse response = new MemberDetailsResponse();
         for (String fileName : filesList) {
             response = getMember(fileName);
