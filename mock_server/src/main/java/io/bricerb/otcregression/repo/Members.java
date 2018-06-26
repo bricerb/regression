@@ -17,9 +17,8 @@ public class Members {
         MemberDetailsResponse response = new MemberDetailsResponse();
         for (String fileName : filesList) {
             response = getMember(fileName);
-
             String[] filePath = fileName.split("/");
-            if (filePath[filePath.length-1].contains(cardNumber) || response.getSerialNumber().equals(cardNumber)) {
+            if (filePath[filePath.length-1].contains(String.valueOf(cardNumber)) || response.getSerialNumber().equals(String.valueOf(cardNumber))) {
                 break;
             }
         }
@@ -31,6 +30,7 @@ public class Members {
         try {
             response = gson.fromJson(new FileReader(fileName), MemberDetailsResponse.class);
         } catch (Exception e) {
+            e.printStackTrace();
         }
         return response;
     }

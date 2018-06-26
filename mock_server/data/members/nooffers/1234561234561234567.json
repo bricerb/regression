@@ -1,0 +1,11 @@
+{
+"serialNumber" : "100088365",
+"cardBalance" : 0,
+"cardExpiration" : "12/20/2020",
+"customerSupportNumber" : "555-555-1111",
+"issuer" : "Medicare - No offers",
+"program" : "Medicare - No offers program",
+"hasLimitedSpend" : true,
+"hasOffers" : false,
+"retailers" : []
+}

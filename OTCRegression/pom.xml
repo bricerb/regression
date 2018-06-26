@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>groupId</groupId>
-    <artifactId>otcregression</artifactId>
+    <artifactId>untitled</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <build>
@@ -24,15 +24,7 @@
         </plugins>
     </build>
 
-    <properties>
-        <!-- <java>1.9</java> -->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <start-class>io.bricerb.otcregression.OTCRegressionApplication</start-class>
-    </properties>
-
     <dependencies>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -44,7 +36,11 @@
             <artifactId>java-client</artifactId>
             <version>4.1.2</version>
         </dependency>
-
     </dependencies>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
 </project>

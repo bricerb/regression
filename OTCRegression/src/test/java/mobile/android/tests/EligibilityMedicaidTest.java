@@ -46,30 +46,35 @@ public class EligibilityMedicaidTest extends AbstractTest {
 
         //Scan Screen
         Assert.assertTrue((app.scanScreen().findElementWithTimeout(By.id("com.incomm.otc:id/scan_button"), 30)).isDisplayed());
-        Assert.assertTrue(app.scanScreen().enterUpcBtn.isDisplayed());
-        app.scanScreen().enterUpcBtn.click();
+        MobileElement submitButton = app.scanScreen().findElementWithTimeout(By.id("com.incomm.otc:id/enter_upc_btn"), 30);
+        Assert.assertTrue(submitButton.isDisplayed());
+        submitButton.click();
 
         //Enter UPC Screen
-        app.enterUPCScreen().enterUpcField.sendKeys(expectedUPC);
-        app.enterUPCScreen().upcSubmitBtn.click();
-
+        MobileElement upcEntry = app.enterUPCScreen().findElementWithTimeout(By.id("com.incomm.otc:id/upc_entry_ET"), 30);
+        upcEntry.sendKeys(expectedUPC);
+        driver.hideKeyboard();
+        MobileElement upcSubmit = app.enterUPCScreen().findElementWithTimeout(By.id("com.incomm.otc:id/upc_submit_btn"), 30);
+        upcSubmit.click();
 
         //Item Eligibility Screen
         MobileElement upcTV = app.itemEligibilityScreen().findElementWithTimeout(By.id("com.incomm.otc:id/barcode_upc_tv"), 30);
         String upcNumber = upcTV.getText();
         upcNumber = upcNumber.replaceAll("\\D", "");
         Assert.assertEquals(expectedUPC, upcNumber);
+        app.itemEligibilityScreen().findElementWithTimeout(By.id("com.incomm.otc:id/eligible_item_tv"), 30);
         Assert.assertEquals("This Item is Eligible", app.itemEligibilityScreen().itemIsEligibleOrNot.getText());
 
         //Select New Item
-        app.itemEligibilityScreen().scanNewItem.click();
-        app.scanScreen().enterUpcBtn.click();
-
-        //UPC Entry Screen
-        app.enterUPCScreen().enterUpcField.sendKeys("111111111112");
+        MobileElement scanNewItem = (MobileElement) driver.findElementById("com.incomm.otc:id/scan_new_item_ll");
+        scanNewItem.click();
+        MobileElement upcSubmitBtn = (MobileElement) driver.findElementById("com.incomm.otc:id/enter_upc_btn");
+        upcSubmitBtn.click();
+        MobileElement upcEntry2 = (MobileElement) driver.findElementById("com.incomm.otc:id/upc_entry_ET");
+        upcEntry2.sendKeys("111111111112");
         driver.hideKeyboard();
-        app.enterUPCScreen().upcSubmitBtn.click();
-
+        MobileElement upcSubmitBtn2 = (MobileElement) driver.findElementById("com.incomm.otc:id/upc_submit_btn");
+        upcSubmitBtn2.click();
         Assert.assertEquals("This Item is not Eligible", app.itemEligibilityScreen().itemIsEligibleOrNot.getText());
 
     }

@@ -12,6 +12,8 @@ public class AbstractTest {
     protected OTC app;
     protected String medicareNoOffersCardNumber = "1234567890123456789";
     protected String medicaidOffersCardNumber = "0000000000000000000";
+    protected String eligibleItemWithoutOffers = "440337005307";
+    protected String eligibleItemWithOffers = "703500733044";
 
     @Before
     public void connect() throws MalformedURLException {

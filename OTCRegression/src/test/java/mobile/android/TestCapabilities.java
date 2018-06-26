@@ -5,7 +5,8 @@ public class TestCapabilities {
     private static boolean isBitriseBuild = (System.getenv().get("REGRESSION_TEST_GIT_URL") != null);
     public static final String APK_PATH = isBitriseBuild ? System.getenv("BITRISE_APK_PATH") : "/Users/Brice/AndroidStudioProjects/mobile-otc-android-andotc/app/build/outputs/apk/regression/app-regression.apk";
     public static final String PLATFORM_VERSION_NUMBER = isBitriseBuild ? "8.0" : "8.0";
-  
+
+
 //    Bitrise URL and Version
 //    public static final String APK_PATH = "/bitrise/deploy/app-regression.apk";
 //    public static final String PLATFORM_VERSION_NUMBER = "8.0" : "8.0";

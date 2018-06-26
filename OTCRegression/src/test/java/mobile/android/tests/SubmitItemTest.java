@@ -44,14 +44,14 @@ public class SubmitItemTest extends AbstractTest {
 //        enter upc number & submit
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         app.scanScreen().enterUpcBtn.click();
-        app.enterUPCScreen().enterUpcField.setValue("440337005307");
+        app.enterUPCScreen().enterUpcField.setValue(eligibleItemWithoutOffers);
         driver.hideKeyboard();
         app.enterUPCScreen().upcSubmitBtn.click();
 
         System.out.println("DATA:" + driver.getPageSource());
 
         try {
-            Thread.sleep(15000);
+            Thread.sleep(10000);
         } catch (Exception e) {
             System.out.println("Oops!");
         }
@@ -66,22 +66,22 @@ public class SubmitItemTest extends AbstractTest {
         }
         app.itemEligibilityScreen().submitItemBtn.click();
 
-//        //select that item should be eligible
-//
-//        //checks to see if the item is present and visible
-//        WebDriverWait wait = new WebDriverWait(driver, 60);
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.incomm.otc:id/submit_item_survey_btn")));
-////        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout" +
-////                "/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout" +
-////                "/android.widget.LinearLayout[3]/android.widget.Button")));
-////        app.itemEligibilityScreen().findElementWithTimeout(By.id("com.incomm.otc:id/submit_btn"), 30);
-//        app.itemEligibilityScreen().submitItemBtn.click();
-//        app.surveyScreen().checkMarkEligible.click();
-//        app.surveyScreen().submitItemSurveyBtn.click();
-//
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.incomm.otc:id/enter_upc_btn")));
-//        //app.dashboardScreen().findElementWithTimeout(By.id("com.incomm.otc:id/enter_upc_btn"), 30);
-////        Assert.assertTrue(app.scanScreen().enterUpcBtn.isDisplayed());
+        //select that item should be eligible
+
+        //checks to see if the item is present and visible
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.incomm.otc:id/submit_item_survey_btn")));
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout" +
+//                "/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout" +
+//                "/android.widget.LinearLayout[3]/android.widget.Button")));
+//        app.itemEligibilityScreen().findElementWithTimeout(By.id("com.incomm.otc:id/submit_btn"), 30);
+        app.itemEligibilityScreen().submitItemBtn.click();
+        app.surveyScreen().checkMarkEligible.click();
+        app.surveyScreen().submitItemSurveyBtn.click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.incomm.otc:id/enter_upc_btn")));
+        //app.dashboardScreen().findElementWithTimeout(By.id("com.incomm.otc:id/enter_upc_btn"), 30);
+        Assert.assertTrue(app.scanScreen().enterUpcBtn.isDisplayed());
 
     }
 }
