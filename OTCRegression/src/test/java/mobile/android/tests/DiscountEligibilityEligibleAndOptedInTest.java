@@ -39,7 +39,7 @@ public class DiscountEligibilityEligibleAndOptedInTest extends AbstractTest {
 //        enter upc number & submit
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         app.scanScreen().enterUpcBtn.click();
-        app.enterUPCScreen().enterUpcField.setValue("111111111111");
+        app.enterUPCScreen().enterUpcField.setValue(eligibleItemWithOffers);
         app.enterUPCScreen().upcSubmitBtn.click();
 
 //        //item is eligible

@@ -1,22 +1,16 @@
 package io.bricerb.otcregression.models;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
 public class ItemEligibilityRequest {
 
 
-    @SerializedName("serialNumber")
     private String serialNumber;
-    @SerializedName("retailer")
     private String retailer;
-    @SerializedName("UPC")
+    private String UPC;
     private String uPC;
-    @SerializedName("ApiVersion")
+    private String upc;
+    private String ApiVersion;
     private String apiVersion;
-    @SerializedName("mobileAppVersion")
     private String mobileAppVersion;
-    @SerializedName("success")
     private boolean success;
 
     public boolean isSuccess() {return success; }
@@ -31,18 +25,18 @@ public class ItemEligibilityRequest {
         this.retailer = retailer;
     }
 
-    public void setuPC(String uPC) {
-        this.uPC = uPC;
+    public void setuPC(String UPC) {
+        this.UPC = UPC;
     }
 
-    public String getUPC() { return uPC; }
+    public String getUPC() { return UPC; }
 
     public String getApiVersion() {
-        return apiVersion;
+        return ApiVersion;
     }
 
     public void setApiVersion(String apiVersion) {
-        this.apiVersion = apiVersion;
+        this.ApiVersion = apiVersion;
     }
 
     public String getMobileAppVersion() {
@@ -63,9 +57,13 @@ public class ItemEligibilityRequest {
         return "ItemEligibilityRequest{" +
                 "serialNumber='" + serialNumber + '\'' +
                 ", retailer='" + retailer + '\'' +
+                ", UPC='" + UPC + '\'' +
                 ", uPC='" + uPC + '\'' +
+                ", upc='" + upc + '\'' +
+                ", ApiVersion='" + ApiVersion + '\'' +
                 ", apiVersion='" + apiVersion + '\'' +
                 ", mobileAppVersion='" + mobileAppVersion + '\'' +
+                ", success=" + success +
                 '}';
     }
 

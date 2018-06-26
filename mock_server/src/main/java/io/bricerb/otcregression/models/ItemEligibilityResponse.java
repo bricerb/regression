@@ -12,7 +12,7 @@ public class ItemEligibilityResponse implements Serializable {
     private String itemDescription;
 
     @SerializedName("eligibleLimitedSpend")
-    private boolean eligibleLimitedSpend;
+    private String eligibleLimitedSpend;
 
     @SerializedName("listOfOfferDescriptions")
     private List<String> listOfOfferDescriptions;
@@ -25,11 +25,11 @@ public class ItemEligibilityResponse implements Serializable {
         this.itemDescription = itemDescription;
     }
 
-    public boolean getEligibleLimitedSpend() {
+    public String getEligibleLimitedSpend() {
         return eligibleLimitedSpend;
     }
 
-    public void setEligibleLimitedSpend(boolean eligibleLimitedSpend) {
+    public void setEligibleLimitedSpend(String eligibleLimitedSpend) {
         this.eligibleLimitedSpend = eligibleLimitedSpend;
     }
 

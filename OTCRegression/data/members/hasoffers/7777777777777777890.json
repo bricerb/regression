@@ -1,12 +1,12 @@
 {
 "serialNumber" : "100098456",
-"cardBalance" : 99,
+"cardBalance" : "99",
 "cardExpiration" : "12/23/2037",
 "customerSupportNumber" : "555-555-1111",
 "issuer" : "Subway",
 "program" : "Jared",
-"hasLimitedSpend" : true,
-"hasOffers" : true,
+"hasLimitedSpend" : "true",
+"hasOffers" : "true",
 "retailers" : ["CVS", "Discount Drug Mart", "Dollar General", "Duane Reade", "Family Dollar"]
 }
 

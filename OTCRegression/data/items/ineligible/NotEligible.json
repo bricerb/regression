@@ -1,3 +1,3 @@
 { "itemDescription" : "Not Elligible",
-  "eligibleLimitedSpend" : false,
+  "eligibleLimitedSpend" : "false",
   "listOfOfferDescriptions" : null }

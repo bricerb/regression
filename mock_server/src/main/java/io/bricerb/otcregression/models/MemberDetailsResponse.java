@@ -10,7 +10,7 @@ public class MemberDetailsResponse {
     @SerializedName("serialNumber")
     private String serialNumber;
     @SerializedName("cardBalance")
-    private Long cardBalance;
+    private String cardBalance;
     @SerializedName("cardExpiration")
     private String cardExpiration;
     @SerializedName("customerSupportNumber")
@@ -20,9 +20,9 @@ public class MemberDetailsResponse {
     @SerializedName("program")
     private String program;
     @SerializedName("hasLimitedSpend")
-    private Boolean hasLimitedSpend;
+    private String hasLimitedSpend;
     @SerializedName("hasOffers")
-    private Boolean hasOffers;
+    private String hasOffers;
     @SerializedName("retailers")
     private List<String> retailers = null;
 
@@ -34,11 +34,11 @@ public class MemberDetailsResponse {
         this.serialNumber = serialNumber;
     }
 
-    public Long getCardBalance() {
+    public String getCardBalance() {
         return cardBalance;
     }
 
-    public void setCardBalance(Long cardBalance) {
+    public void setCardBalance(String cardBalance) {
         this.cardBalance = cardBalance;
     }
 
@@ -74,19 +74,19 @@ public class MemberDetailsResponse {
         this.program = program;
     }
 
-    public Boolean getHasLimitedSpend() {
+    public String getHasLimitedSpend() {
         return hasLimitedSpend;
     }
 
-    public void setHasLimitedSpend(Boolean hasLimitedSpend) {
+    public void setHasLimitedSpend(String hasLimitedSpend) {
         this.hasLimitedSpend = hasLimitedSpend;
     }
 
-    public Boolean getHasOffers() {
+    public String getHasOffers() {
         return hasOffers;
     }
 
-    public void setHasOffers(Boolean hasOffers) {
+    public void setHasOffers(String hasOffers) {
         this.hasOffers = hasOffers;
     }
 

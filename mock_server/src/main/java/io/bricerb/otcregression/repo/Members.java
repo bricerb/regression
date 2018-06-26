@@ -21,6 +21,7 @@ public class Members {
             if (filePath[filePath.length-1].contains(String.valueOf(cardNumber)) || response.getSerialNumber().equals(String.valueOf(cardNumber))) {
                 break;
             }
+            response = new MemberDetailsResponse();
         }
         return response;
     }

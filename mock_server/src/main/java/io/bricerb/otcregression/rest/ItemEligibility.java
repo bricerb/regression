@@ -16,5 +16,4 @@ public class ItemEligibility {
     public ItemEligibilityResponse getItemElgibility (@RequestBody ItemEligibilityRequest request) {
         return items.getItemEligibility(request.getUPC());
     }
-
 }

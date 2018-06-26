@@ -9,8 +9,6 @@ import java.util.concurrent.TimeUnit;
 
 public class StartScanningTest extends AbstractTest {
 
-    String expectedUPC = "111111111111";
-
     @Test
     public void scanItem() {
         app.termsAndConditionsScreen().findElementWithTimeout(By.id("com.incomm.otc:id/tc_accept_cb"), 30);
@@ -52,7 +50,7 @@ public class StartScanningTest extends AbstractTest {
 
         //Enter UPC Screen
         MobileElement upcEntry = app.enterUPCScreen().findElementWithTimeout(By.id("com.incomm.otc:id/upc_entry_ET"), 30);
-        upcEntry.sendKeys(expectedUPC);
+        upcEntry.sendKeys(eligibleItemWithoutOffers);
 //        driver.hideKeyboard();
         MobileElement upcSubmit = app.enterUPCScreen().findElementWithTimeout(By.id("com.incomm.otc:id/upc_submit_btn"), 30);
         upcSubmit.click();
@@ -61,7 +59,7 @@ public class StartScanningTest extends AbstractTest {
         MobileElement upcTV = app.itemEligibilityScreen().findElementWithTimeout(By.id("com.incomm.otc:id/barcode_upc_tv"), 30);
         String upcNumber = upcTV.getText();
         upcNumber = upcNumber.replaceAll("\\D", "");
-        Assert.assertEquals(expectedUPC, upcNumber);
+        Assert.assertEquals(eligibleItemWithoutOffers, upcNumber);
         app.itemEligibilityScreen().findElementWithTimeout(By.id("com.incomm.otc:id/eligible_item_tv"), 30);
         Assert.assertEquals("This Item is Eligible", app.itemEligibilityScreen().itemIsEligibleOrNot.getText());
 

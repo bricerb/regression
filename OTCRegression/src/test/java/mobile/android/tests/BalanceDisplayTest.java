@@ -32,8 +32,5 @@ public class BalanceDisplayTest extends AbstractTest {
 
         app.dashboardScreen().findElementWithTimeout(By.id("com.incomm.otc:id/account_balance"), 30);
         Assert.assertEquals(expectedBalance, app.dashboardScreen().accountBalance.getText());
-
-
-
     }
 }
